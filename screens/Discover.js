@@ -5,6 +5,7 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
+  StyleSheet,StatusBar,
   ActivityIndicator,
 } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
@@ -45,7 +46,7 @@ const Discover = () => {
   }, [bl_lat, bl_lng, tr_lat, tr_lng, type]);
 
   return (
-    <SafeAreaView className="flex-1 bg-white relative">
+    <SafeAreaView className="flex-1 bg-white relative" style={styled.container}>
       <View className="flex-row items-center justify-between px-8">
         <View>
           <Text className="text-[40px] text-[#0B646B] font-bold">Discover</Text>
@@ -74,7 +75,7 @@ const Discover = () => {
             setTr_lng(details?.geometry?.viewport?.northeast?.lng);
           }}
           query={{
-            key: "YOUR_API_KEY",
+            key: "8afe4e2420mshe636362be0724c3p1ae279jsn54a1532450d5",
             language: "en",
           }}
         />
@@ -169,3 +170,10 @@ const Discover = () => {
 };
 
 export default Discover;
+
+
+const styled = StyleSheet.create({
+  container: { 
+    marginTop: StatusBar.currentHeight
+  }
+})

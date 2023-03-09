@@ -4,6 +4,8 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
+  StyleSheet,
+  StatusBar
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import * as Animatable from "react-native-animatable";
@@ -21,7 +23,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white flex-1 relative">
+    <SafeAreaView className="bg-white flex-1 relative" style={styled.container}>
       {/* First Section */}
 
       <View className="flex-row px-6 mt-8 items-center space-x-2">
@@ -77,3 +79,10 @@ const HomeScreen = () => {
 };
 
 export default HomeScreen;
+
+
+const styled = StyleSheet.create({
+  container: { 
+    marginTop: StatusBar.currentHeight
+  }
+})

@@ -5,6 +5,8 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  StatusBar,
+  StyleSheet
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -21,7 +23,7 @@ const ItemScreen = ({ route }) => {
   }, []);
 
   return (
-    <SafeAreaView className="flex-1 bg-white relative">
+    <SafeAreaView className="flex-1 bg-white relative" style={styled.container}>
       <ScrollView className="flex-1 px-4 py-6">
         <View className="relative bg-white shadow-lg">
           <Image
@@ -165,3 +167,10 @@ const ItemScreen = ({ route }) => {
 };
 
 export default ItemScreen;
+
+
+const styled = StyleSheet.create({
+  container: { 
+    marginTop: StatusBar.currentHeight
+  }
+})

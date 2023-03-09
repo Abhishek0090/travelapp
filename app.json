@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "travelapp",
-    "slug": "travelapp",
+    "slug": "travellingapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icons.png",
@@ -32,7 +32,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "94368f3c-8fb5-4c4e-a2c9-62705b85be50"
+        "projectId": "f3e54153-f184-4696-a2b3-5844dd6b771f"
       }
     },
     "owner": "abhi123124"
